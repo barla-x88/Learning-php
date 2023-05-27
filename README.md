@@ -278,3 +278,72 @@ require "/path/to/filname";
 require_once "/path/to/filname";
 
 ```
+
+## Functions
+
+### Function definition
+
+A function definition looks like this -
+
+```PHP
+function calculateSalesTax($price, $tax)
+{
+return $price + ($price * $tax);
+}
+
+//Function definition with default argument values
+function calculateSalesTax($price, $tax = 0.0675)
+{
+    $total = $price + ($price * $tax);
+    echo "Total cost: $total";
+}
+
+//Mark parameters optional by assigning them a default value of nothing
+function calculateSalesTax($price, $tax = 0)
+{
+// Function body
+}
+```
+
+Default argument values must appear at the end of the parameter list and must be constant expressions; you cannot assign nonconstant values such as function calls or variables.
+
+### Anonymous Functions
+
+These are used for callback functions where a specific function is called as a result of calling another function. These functions are called **anonymous functions or closures**. They do not have a function name.
+
+```PHP
+//Closures can be defined as content of a variable:
+$example = function() {
+echo "Closure";
+};
+
+
+$example();
+```
+
+### Passing arguments
+
+**Passing arguments by value**
+
+```PHP
+$pricetag = 15.00;
+$salestax = .0675;
+$total = calculateSalesTax($pricetag, $salestax);
+
+//or
+calculateSalesTax(15.00, .0675);
+```
+
+When arguments are passed in this manner Any changes made to those values within the scope of the function are ignored outside of the function. In essence the interpreter creates a copy of each variable.
+
+**Passing arguments by reference**
+
+```PHP
+$a = 15;
+$example = function() use (&$a) {
+$a += 100;
+echo $a . "\n";
+};
+```
+
+The global variable $a is made available by reference. This causes the global value to change when the closure is executed. The [`use` keyword](https://blog.devgenius.io/php-7-x-p40-use-keyword-37d8e7df9138) allows us to access global variable.
