@@ -511,7 +511,7 @@ array_map(callable $callback, array $array1, array ...$arrays): array
 
 **array_rand()** - Returns a random key(s) from an array. [array_rand()](https://www.php.net/manual/en/function.array-rand.php)
 
-**shuffle() **- Randomly shuffles the elements of an array. [shuffle()](https://www.php.net/manual/en/function.shuffle.php)
+**shuffle()** - Randomly shuffles the elements of an array. [shuffle()](https://www.php.net/manual/en/function.shuffle.php)
 
 **array_sum()** - Calculates and returns the sum of values in an array. [array_sum()](https://www.php.net/manual/en/function.array-sum.php)
 
