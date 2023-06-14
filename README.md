@@ -477,6 +477,16 @@ array_map(callable $callback, array $array1, array ...$arrays): array
 
 ### Merging, Slicing, Splicing, and Dissecting Arrays
 
+**array_replace()** - The array_replace() function replaces the values of the first array with the corresponding values from the following arrays. It creates a new array with the replaced values. If a key exists in multiple arrays, the value from the last array will overwrite the previous values. The return value is a new array with the replaced values. Documentation: [array_replace()](https://www.php.net/manual/en/function.array-replace.php)
+
+**array_product()** - The array_product() function calculates and returns the product of all values in an array. It multiplies all the values together and returns the result. If the array is empty, it returns 1. The return value is the product of the values. Documentation: [array_product()](https://www.php.net/manual/en/function.array-product.php)
+
+**array_reduce()** - The array_reduce() function reduces an array to a single value using a callback function. It iteratively applies the callback function to the elements of the array, reducing it to a single value. The return value is the result of the reduction. Documentation: [array_reduce()](https://www.php.net/manual/en/function.array-reduce.php)
+
+**explode()** - The explode() function splits a string into an array of substrings based on a delimiter. It breaks a string into parts whenever the delimiter is found and returns an array of those parts. The return value is an array of substrings. Documentation: [explode()](https://www.php.net/manual/en/function.explode.php)
+
+**implode()** - The implode() function joins the elements of an array into a single string using a delimiter. It concatenates the array elements into a string with the delimiter placed between each element. The return value is a string representing the joined elements. Documentation: [implode()](https://www.php.net/manual/en/function.implode.php)
+
 **array_merge()** - The array_merge() function merges two or more arrays into a single array. It creates a new array containing the values of all the input arrays. If the input arrays have string keys, the values with duplicate keys will overwrite each other. The return value is a new array with the merged values. Documentation: [array_merge()](https://www.php.net/manual/en/function.array-merge.php)
 
 **array_merge_recursive()** - The array_merge_recursive() function merges two or more arrays recursively. It behaves similarly to array_merge(), but when it encounters arrays with the same string keys, it merges them recursively rather than overwriting the values. This is useful when dealing with multi-dimensional arrays. The return value is a new array with the recursively merged values. Documentation: [array_merge_recursive()](https://www.php.net/manual/en/function.array-merge-recursive.php)
